@@ -124,7 +124,7 @@ exports.login = async (req, res) => {
       const token = generateAccessToken(tokenPayload);
       return res
         .status(200)
-        .json({ message: "Inicio de sesión exitoso", token });
+        .json({ message: "Inicio de sesión exitoso", token, pipeline: true });
     } else {
       //return res.status(401).json({ error: 'Credenciales inválidas' });
       errors.push("Error al iniciar sesión.");
@@ -217,7 +217,6 @@ exports.getUser = async (req, res) => {
     res.status(500).json({ message: "Error en el servidor" });
   }
 };
-
 
 /**
  * @description
