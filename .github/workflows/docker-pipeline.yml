@@ -28,11 +28,11 @@ jobs:
       # 4. Construir y etiquetar la imagen Docker
       - name: Build and tag Docker image
         run: |
-          docker build -t matiasfontecilla/backend:latest .
-          docker tag matiasfontecilla/backend:latest matiasfontecilla/backend:${{ github.sha }}
+          docker build -t matiasfontecilla/taller3:latest .
+          docker tag matiasfontecilla/taller3:latest matiasfontecilla/taller3:${{ github.sha }}
 
-      # 5. Subir la imagen a Docker Hub
+      # 5taller3 Subir la imagen a Docker Hub
       - name: Push Docker image
         run: |
-          docker push matiasfontecilla/backend:latest
-          docker push matiasfontecilla/backend:${{ github.sha }}
+          docker push matiasfontecilla/taller3:latest
+          docker push matiasfontecilla/taller3:${{ github.sha }}
