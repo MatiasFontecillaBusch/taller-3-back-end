@@ -23,12 +23,6 @@ DB_PASSWORD=  # Your PostgreSQL password
 TOKEN_SECRET=mysecretkey  # Secret key for tokens
 ```
 
-Make sure:
-- **DB_USER** matches your PostgreSQL username (typically `postgres`).
-- **DB_PASSWORD** is the password you use to log into PostgreSQL.
-- **DB_PORT** is set to `5432` (the default PostgreSQL port).
-- The database specified in **DB_DATABASE** exists or will be created.
-
 ---
 
 ## **Create Database and Run Migrations**
@@ -60,14 +54,3 @@ npm run dev
 ```
 
 This will start the backend, and your project will connect to the PostgreSQL database.
-
----
-
-## **Notes:**
-- If you encounter connection issues, make sure your PostgreSQL service is running.
-- Ensure that the `pg` and `pg-hstore` dependencies are installed in your project:
-  ```bash
-  npm install pg pg-hstore
-  ```
-
-With these changes, your project will now be configured to work with PostgreSQL instead of MySQL. 😊
